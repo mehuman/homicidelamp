@@ -6,11 +6,11 @@ from dateutil import tz
 import paho.mqtt.client as mqtt
 
 #Variables
-mqtt_user="aududnam"
-mqtt_pass="EVLj8kKLD7nl"
-mqtt_host="m10.cloudmqtt.com"
+mqtt_user="USERNAME"
+mqtt_pass="PASSWORD"
+mqtt_host="HOST.cloudmqtt.com"
 mqtt_port="11213"
-facebook_access_token="1509501939346799%7Cphmj065b6LVrReEPk998Y8QjsAo"
+facebook_access_token="TOKEN"
 
 #Setup mqtt client
 mqttc = mqtt.Client()
