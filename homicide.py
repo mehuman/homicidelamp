@@ -8,8 +8,8 @@ import paho.mqtt.client as mqtt
 #Variables
 mqtt_user="USERNAME"
 mqtt_pass="PASSWORD"
-mqtt_host="HOST.cloudmqtt.com"
-mqtt_port="11213"
+mqtt_host="HOST"
+mqtt_port="PORT"
 facebook_access_token="TOKEN"
 
 #Setup mqtt client
