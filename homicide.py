@@ -11,6 +11,7 @@ mqtt_pass="PASSWORD"
 mqtt_host="HOST"
 mqtt_port="PORT"
 facebook_access_token="TOKEN"
+is_homicide=0
 
 #Setup mqtt client
 mqttc = mqtt.Client()
@@ -38,7 +39,14 @@ for i in values["data"]:
 	    homicide = ['District\nHomicide', 'District Homicide'] #the two strings I've seen the BPD post
 	    for phrase in homicide:
 		message = i.get("message")
+                #is_homicide=1
 		if phrase in message:
-		    #todo log the message print i.get("message")
-                    print "homicide"
-		    mqttc.publish("homicide", "1")
+                    is_homicide=1
+                    print message
+
+if is_homicide:
+    mqttc.publish("homicide", "1")
+    print "homicide"
+else:
+    mqttc.publish("homicide", "0")
+    print "no homicide"
